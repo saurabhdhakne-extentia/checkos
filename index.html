@@ -1,0 +1,43 @@
+<!DOCTYPE HTML> 
+<html> 
+
+<head> 
+	<title> 
+		JavaScript 
+	| Detecting the OS
+	</title> 
+</head> 
+
+<body style="text-align:center;" id="body"> 
+        <h1 style="color:green;"> 
+			Identigy Platform
+		</h1> 
+	<button onclick="GFG_Fun()"> 
+		Detect 
+	</button> 
+	<p id="GFG_DOWN"
+	    style="color: blac; 
+			font-size: 24px; 
+			font-weight: bold;"> 
+	</p> 
+	<script> 
+		HTMLDocument.prototype.e = document.getElementById; 
+		var el_up = document.e("GFG_UP"); 
+		var el_down = document.e("GFG_DOWN"); 
+		var Name = "Not known"; 
+		if (navigator.appVersion.indexOf("Win") != -1) Name = 
+		"Windows OS"; 
+		if (navigator.appVersion.indexOf("Mac") != -1) Name = 
+		"MacOS"; 
+		if (navigator.appVersion.indexOf("X11") != -1) Name = 
+		"UNIX OS"; 
+		if (navigator.appVersion.indexOf("Linux") != -1) Name = 
+		"Linux OS"; 
+
+		function GFG_Fun() { 
+			el_down.innerHTML = Name; 
+		} 
+	</script> 
+</body> 
+
+</html> 
